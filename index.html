@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alean Forecast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="main">
+      <section id="header">
+        <a href="#" class="logo">AleanForecast</a>
+        <div id="search-box">
+          <input
+            type="text"
+            placeholder="Enter the city name...."
+            required
+            name="location"
+          />
+          <button id="search-btn"><i class="bi bi-search"></i></button>
+          <button class="user-current-location">
+            <i class="ri-crosshair-2-fill"></i>
+            <p class="user_status">Use current location</p>
+          </button>
+        </div>
+      </section>
+      <section id="weather-details">
+        <div class="weather-details-box">
+          <div class="weather-tempreature" id="current-weather-bg">
+            <img src="images/snow.png" class="currentWeather" />
+            <h3>Tempreature : <span class="tempreature"> 30</span>°C</h3>
+            <h4>City : <span class="city">Kolkata</span></h4>
+            <h4>Country : <span class="country">IN</span></h4>
+          </div>
+          <div class="sunset-sunrise-box">
+            <div class="sunrise-box">
+              <div class="attach-sunset-sunrise-text">
+                <i class="bi bi-sunrise"></i>
+                <big>Sunrise</big>
+              </div>
+              <h4 class="sunrise">6:00 a.m</h4>
+            </div>
+            <div class="sunset-box">
+              <div class="attach-sunset-sunrise-text">
+                <i class="bi bi-sunset"></i>
+                <big>Sunset</big>
+              </div>
+              <h4 class="sunset">6:29 p.m</h4>
+            </div>
+          </div>
+        </div>
+        <div class="weather-details-box">
+          <div class="humidity-box">
+            <img src="images/humidity.png" alt="" srcset="" />
+            <div class="humidity-text">
+              <h4>Humidity : <span class="humidity"> 50</span>%</h4>
+              <p>
+                The dew point is <span class="humidity-small">50</span>% <br />
+                right now!
+              </p>
+            </div>
+          </div>
+          <div class="wind-box">
+            <img src="images/wind.png" alt="" srcset="" />
+            <div class="wind-text">
+              <h4>Wind : <span class="wind"> 3.09 </span>km/h</h4>
+              <p>
+                The wind speed is <br /><span class="wind-small">3.09</span>km/h
+                right now!
+              </p>
+            </div>
+          </div>
+          <div class="weather-status">
+            <h4>Weather status</h4>
+            <div class="sky-box">
+              <img src="images/snow.png" alt="" class="currentWeather" />
+              <div class="sky-text">
+                <h4><span class="sky"> cloudy</span></h4>
+                <p>The sky have<br /><span class="sky-small">cloudy </span>.</p>
+              </div>
+            </div>
+            <div class="preasure-box">
+              <img src="images/weatherpressuire.png" alt="" srcset="" />
+              <div class="preasure-text">
+                <h4>Pressure : <span class="preassure"> 1011</span></h4>
+                <p>
+                  The current pressure<br />
+                  is <span class="preassure-small">1011</span> right now!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather-details-box">
+          <div class="current-date">
+            <h4>Current Date</h4>
+            <p class="date">09/08/2023</p>
+          </div>
+          <div class="max-tempreature-box">
+            <img src="images/maxtemp.png" alt="" />
+            <div class="max-tempreature-text">
+              <h4>
+                Max Tempreature <br />
+                <span class="max-tempreature">10 </span> °C
+              </h4>
+              <p>
+                The max Tempreature<br />
+                is <span class="max-tempreature-small">10</span> °C right now!
+              </p>
+            </div>
+          </div>
+          <div class="min-tempreature-box">
+            <img src="images/mintemp.png" alt="" />
+            <div class="min-tempreature-text">
+              <h4>
+                Min Tempreature <br />
+                <span class="min-tempreature">2 </span>°C
+              </h4>
+              <p>
+                The min Tempreature<br />
+                is <span class="min-tempreature-small">2</span> °C right now!
+              </p>
+            </div>
+          </div>
+          <div class="feels-like-tempreature-box">
+            <i class="bi bi-thermometer-half"></i>
+            <div class="feels-like-tempreature-text">
+              <h4>Feels Like <span class="feels-like">8 </span>°C</h4>
+              <p>
+                The Tempreature Feels like<br /><span class="feels-like-small"
+                  >8</span
+                >
+                °C right now!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="weather-details-box">
+          <h4>Upcoming Forecast</h4>
+          <div class="upcoming-tem-box1">
+            <div class="time-box">
+              <big>Time :</big>
+              <small class="upcoming-time-1">15.00</small>
+            </div>
+            <div class="upcoming-weather-temp-description">
+              <div class="upcoming-weather-temp">
+                <img src="images/snow.png" alt="" class="upcoming1_image" />
+                <h4 class="upcoming-temp-1">26 °C</h4>
+              </div>
+              <div class="upcoming-weather-description">
+                <h4>Humidity : <span class="upcoming-1-humidity"></span></h4>
+                <h4>Wind : <span class="upcoming-1-wind"></span></h4>
+                <h4>Status : <span class="upcoming-1-status"></span></h4>
+              </div>
+            </div>
+          </div>
+          <div class="upcoming-tem-box2">
+            <div class="time-box">
+              <big>Time :</big>
+              <small class="upcoming-time-2">15.00</small>
+            </div>
+            <div class="upcoming-weather-temp-description">
+              <div class="upcoming-weather-temp">
+                <img src="images/snow.png" alt="" class="upcoming2_image" />
+                <h4 class="upcoming-temp-2">26 °C</h4>
+              </div>
+              <div class="upcoming-weather-description">
+                <h4>Humidity : <span class="upcoming-2-humidity"></span></h4>
+                <h4>Wind : <span class="upcoming-2-wind"></span></h4>
+                <h4>Status : <span class="upcoming-2-status"></span></h4>
+              </div>
+            </div>
+          </div>
+          <div class="upcoming-tem-box3">
+            <div class="time-box">
+              <big>Time :</big>
+              <small class="upcoming-time-3">15.00</small>
+            </div>
+            <div class="upcoming-weather-temp-description">
+              <div class="upcoming-weather-temp">
+                <img src="images/snow.png" alt="" class="upcoming3_image" />
+                <h4 class="upcoming-temp-3">26 °C</h4>
+              </div>
+              <div class="upcoming-weather-description">
+                <h4>Humidity : <span class="upcoming-3-humidity"></span></h4>
+                <h4>Wind : <span class="upcoming-3-wind"></span></h4>
+                <h4>Status : <span class="upcoming-3-status"></span></h4>
+              </div>
+            </div>
+          </div>
+          <div class="upcoming-tem-box4">
+            <div class="time-box">
+              <big>Time :</big>
+              <small class="upcoming-time-4">15.00</small>
+            </div>
+            <div class="upcoming-weather-temp-description">
+              <div class="upcoming-weather-temp">
+                <img src="images/snow.png" alt="" class="upcoming4_image" />
+                <h4 class="upcoming-temp-4">26 °C</h4>
+              </div>
+              <div class="upcoming-weather-description">
+                <h4>Humidity : <span class="upcoming-4-humidity"></span></h4>
+                <h4>Wind : <span class="upcoming-4-wind"></span></h4>
+                <h4>Status : <span class="upcoming-4-status"></span></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="future-forecast">
+        <div class="future-forecast-day-1">
+          <h4 class="day-1">Sunday</h4>
+          <div class="max-min-temp-otherdays">
+            <img src="images/snow.png" alt="" srcset="" class="day1_image" />
+            <h4>
+              <i class="bi bi-thermometer-sun"></i> Tempreature :
+              <span class="temp-day-1"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-water"></i> Humidity :
+              <span class="humidity-day-1"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-wind"></i> Wind : <span class="wind-day-1"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-cloudy"></i> Pressure :
+              <span class="preassure-day-1"></span>
+            </h4>
+            <h4>
+              <i class="ri-cloud-line"></i> Status :
+              <span class="weather-status-day-1"></span>
+            </h4>
+          </div>
+        </div>
+        <div class="future-forecast-day-2">
+          <h4 class="day-2">Monday</h4>
+          <div class="max-min-temp-otherdays">
+            <img src="images/snow.png" alt="" srcset="" class="day2_image" />
+            <h4>
+              <i class="bi bi-thermometer-sun"></i> Tempreature :
+              <span class="temp-day-2"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-water"></i> Humidity :
+              <span class="humidity-day-2"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-wind"></i> Wind : <span class="wind-day-2"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-cloudy"></i> Pressure :
+              <span class="preassure-day-2"></span>
+            </h4>
+            <h4>
+              <i class="ri-cloud-line"></i> Status :
+              <span class="weather-status-day-2"></span>
+            </h4>
+          </div>
+        </div>
+        <div class="future-forecast-day-3">
+          <h4 class="day-3">Tuesday</h4>
+          <div class="max-min-temp-otherdays">
+            <img src="images/snow.png" alt="" srcset="" class="day3_image" />
+            <h4>
+              <i class="bi bi-thermometer-sun"></i> Tempreature :
+              <span class="temp-day-3"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-water"></i> Humidity :
+              <span class="humidity-day-3"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-wind"></i> Wind : <span class="wind-day-3"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-cloudy"></i> Pressure :
+              <span class="preassure-day-3"></span>
+            </h4>
+            <h4>
+              <i class="ri-cloud-line"></i> Status :
+              <span class="weather-status-day-3"></span>
+            </h4>
+          </div>
+        </div>
+        <div class="future-forecast-day-4">
+          <h4 class="day-4">Wenesday</h4>
+          <div class="max-min-temp-otherdays">
+            <img src="images/snow.png" alt="" srcset="" class="day4_image" />
+            <h4>
+              <i class="bi bi-thermometer-sun"></i> Tempreature :
+              <span class="temp-day-4"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-water"></i> Humidity :
+              <span class="humidity-day-4"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-wind"></i> Wind : <span class="wind-day-4"></span>
+            </h4>
+            <h4>
+              <i class="bi bi-cloudy"></i> Pressure :
+              <span class="preassure-day-4"></span>
+            </h4>
+            <h4>
+              <i class="ri-cloud-line"></i> Status :
+              <span class="weather-status-day-4"></span>
+            </h4>
+          </div>
+        </div>
+      </section>
+      <section id="airQualityIndex">
+        <h3>AIR QUALITY INDEX</h3>
+        <div class="airQualityIndex_child">
+          <div class="airQualityIndex_current">
+            <h3>Current AQI</h3>
+            <div class="airQualityIndex_current_box1">
+            <h4>
+              <i class="ri-windy-line"></i> Air Quality Index : Between <span
+                class="current-aqi-index"
+              ></span>
+            </h4>
+            <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="current-pollution-status"></span></h4>
+          </div>
+          </div>
+          <div class="airQualityIndex_forecast">
+            <h3>Forecast AQI</h3>
+            <div class="airQualityIndex_forecast_box">
+              <div class="aqi-forecast-date-dayName">
+                <h4>Date : <span class="aqi-forecast-date-1"></span></h4>
+                <h4>Day : <span class="aqi-forecast-day-1"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index : <span
+                class="forecast-aqi-index-1"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="forecast-aqi-index-1-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_forecast_box">
+              <div class="aqi-forecast-date-dayName">
+              <h4>Date : <span class="aqi-forecast-date-2"></span></h4>
+                <h4>Day : <span class="aqi-forecast-day-2"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index : <span
+                class="forecast-aqi-index-2"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="forecast-aqi-index-2-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_forecast_box">
+              <div class="aqi-forecast-date-dayName">
+              <h4>Date : <span class="aqi-forecast-date-3"></span></h4>
+                <h4>Day : <span class="aqi-forecast-day-3"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index :  <span
+                class="forecast-aqi-index-3"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="forecast-aqi-index-3-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_forecast_box">
+              <div class="aqi-forecast-date-dayName">
+              <h4>Date : <span class="aqi-forecast-date-4"></span></h4>
+                <h4>Day : <span class="aqi-forecast-day-4"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index :  <span
+                class="forecast-aqi-index-4"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="forecast-aqi-index-4-pollution-status"></span></h4>
+            </div>
+          </div>
+          <div class="airQualityIndex_historical">
+            <h3>Historical AQI</h3>
+            <div class="airQualityIndex_historical_box">
+              <div class="aqi-historical-date-dayName">
+                <h4>Date : <span class="aqi-historical-date-1"></span></h4>
+                <h4>Day : <span class="aqi-historical-day-1"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index : <span
+                class="historical-aqi-index-1"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="historical-aqi-index-1-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_historical_box">
+              <div class="aqi-historical-date-dayName">
+              <h4>Date : <span class="aqi-historical-date-2"></span></h4>
+                <h4>Day : <span class="aqi-historical-day-2"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index : <span
+                class="historical-aqi-index-2"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="historical-aqi-index-2-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_historical_box">
+              <div class="aqi-historical-date-dayName">
+              <h4>Date : <span class="aqi-historical-date-3"></span></h4>
+                <h4>Day : <span class="aqi-historical-day-3"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index :  <span
+                class="historical-aqi-index-3"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="historical-aqi-index-3-pollution-status"></span></h4>
+            </div>
+            <div class="airQualityIndex_historical_box">
+              <div class="aqi-historical-date-dayName">
+              <h4>Date : <span class="aqi-historical-date-4"></span></h4>
+                <h4>Day : <span class="aqi-historical-day-4"></span></h4>
+              </div>
+              <h4> <i class="ri-windy-line"></i> Air Quality Index :  <span
+                class="historical-aqi-index-4"
+              ></span></h4>
+              <h4><i class="ri-cloud-line"></i> Pollution Status : <span class="historical-aqi-index-4-pollution-status"></span></h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <script async src="script.js"></script>
+  </body>
+</html>

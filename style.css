@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  height: 100%;
+  width: 100%;
+}
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --dark-grey: #1a1a1a;
+  --light-grey: #dfdfdf;
+  --neutral-grey: #555555;
+  --grey: #909090;
+  --Inter: "Inter", sans-serif;
+  --Poppins: "Poppins", sans-serif;
+  --Michroma: "Michroma", sans-serif;
+}
+
+#main {
+  height: auto;
+  width: 100%;
+  background-color: var(--black);
+  scroll-behavior: smooth;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+#header .logo {
+  text-decoration: none;
+  color: var(--white);
+  font: 500 2vw var(--Michroma);
+  letter-spacing: 1px;
+}
+
+#search-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-box input{
+   display: none;
+  color: var(--white);
+  font: 400 1.4rem var(--Poppins);
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--white);
+  padding: 3px 12px;
+  border-radius: 100px;
+}
+#search-box input::placeholder {
+  color: var(--white);
+  opacity: 0.5;
+}
+#search-btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+}
+
+#search-btn i {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.user-current-location{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font: 300 1.5rem var(--Poppins);
+  background-color: var(--light-grey);
+  color: var(--black);
+  margin-left: .5rem;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+}
+
+.user_status{
+  margin-left: .5rem;
+}
+
+
+/* Weather details section*/
+
+#weather-details{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+.weather-details-box{
+  width: 23vw;
+  height: 86vh;
+  border-radius: 20px;
+  background: linear-gradient(45deg,rgba(225, 214, 214, 0.150),rgba(225, 214, 214, 0.150));
+}
+
+#current-weather-bg{
+  width: 100%;
+  background: url(images/cloudy-sky.jpg) scroll no-repeat center !important;
+  background-size: cover;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.weather-tempreature{
+  gap: 10px;
+  padding: 10px;
+}
+.weather-tempreature .currentWeather{
+  width: 15vw;
+}
+.weather-tempreature h3{
+  font: 300 2.5rem var(--Poppins);
+  color: var(--white);
+
+}
+
+.weather-tempreature h4{
+  font: 300 1.5rem var(--Poppins);
+  color: var(--white);
+
+}
+
+.sunset-sunrise-box{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sunrise-box,.sunset-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--white);
+  border-radius: 2rem;
+  margin: 1rem 0;
+} 
+
+.attach-sunset-sunrise-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.bi-sunrise, .bi-sunset{
+  color: var(--white);
+  font: 600 2rem var(--Poppins);
+}
+
+.attach-sunset-sunrise-text big{
+  color: var(--white);
+  font: 300 1.5rem var(--Poppins);
+}
+
+.sunrise-box h4, .sunset-box h4{
+  color: var(--white);
+  font: 300 1.5rem var(--Poppins);
+}
+
+
+/* Second weather box */
+.weather-details-box:nth-child(2), .weather-details-box:nth-child(3), .weather-details-box:last-child{
+  padding: 10px;
+}
+.humidity-box, .wind-box, .sky-box , .preasure-box, .max-tempreature-box, .min-tempreature-box,
+.feels-like-tempreature-box, .current-date{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background: rgba(0,0,0,7);
+  border-radius: 2rem;
+  margin: .5rem 0;
+}
+.humidity-box, .wind-box, .sky-box , .preasure-box{
+  justify-content: left;
+  gap: 20px;
+}
+.max-tempreature-box, .min-tempreature-box,
+.feels-like-tempreature-box{
+  justify-content: left;
+}
+.humidity-text, .wind-text, .sky-text, .preasure-text, .max-tempreature-text, .min-tempreature-text,
+.feels-like-tempreature-text{
+  gap: 10px;
+}
+
+.humidity-text h4, .wind-text h4, .sky-box h4, .preasure-text h4, .max-tempreature-text h4,
+.min-tempreature-text h4, .feels-like-tempreature-text h4, .current-date h4{
+  font: 300 2rem var(--Poppins);
+  color: var(--white);
+}
+.humidity-text p, .wind-text p, .sky-box p, .preasure-text p, .max-tempreature-text p,
+.min-tempreature-text p, .feels-like-tempreature-text p, .current-date p{
+  font: 300 1.2rem var(--Poppins);
+  color: var(--white);
+  opacity: .6;
+}
+
+.weather-status{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px 10px;
+  background: rgba(0,0,0,7);
+  border-radius: 2rem;
+  margin: .5rem 0;
+}
+
+.weather-status h4{
+  font: 400 1.5rem var(--Poppins);
+  color: var(--white);
+}
+
+.max-tempreature-box img, .min-tempreature-box img{
+  height: 90px;
+  width: 90px;
+}
+.sky-box img{
+  height: 80px;
+  width: 82px;
+}
+.preasure-box img{
+  height: 70px;
+  width: 70px;
+}
+.feels-like-tempreature-box .bi-thermometer-half{
+  font:500 8.5rem var(--Poppins);
+  color: var(--white);
+}
+.sky-box , .preasure-box{
+  margin: 0 0 !important;
+}
+
+
+.sky-box{
+  padding: 20px 25px 20px 0px;
+}
+.preasure-box{
+  padding: 20px 0px 20px 15px;
+}
+
+
+/* fourth weather box*/
+
+.weather-details-box:last-child h4{
+  color: var(--white);
+  font: 300 1.5rem var(--Poppins);
+}
+.upcoming-tem-box1, .upcoming-tem-box2,
+.upcoming-tem-box3, .upcoming-tem-box4{
+  width: 100%;
+  padding: 10px 10px;
+  background: rgba(0,0,0,7);
+  border-radius: 2rem;
+  margin: .5rem 0;
+}
+.time-box{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-box big{
+  color: var(--white);
+  font: 300 1.5rem var(--Poppins);
+}
+.time-box small{
+  color: var(--white);
+  font: 300 1.2rem var(--Poppins);
+  opacity: .6;
+}
+
+.upcoming-weather-temp-description{
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  align-items: center;
+  padding: 5px 0px 5px 5px;
+}
+
+
+.upcoming-weather-temp-description img{
+  height: 40px;
+  width: 40px;
+}
+
+.upcoming-weather-description h4{
+
+  color: var(--white);
+  font: 300 1.5rem var(--Poppins);
+}
+
+
+/* Future forecast section */
+
+#future-forecast{
+  height: auto;
+  width: 100%;
+  background: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.future-forecast-day-1,
+.future-forecast-day-2,
+.future-forecast-day-3,
+.future-forecast-day-4{
+  height: auto;
+  width: 23.5vw;
+  margin: .5rem;
+  background: linear-gradient(45deg,rgba(225, 214, 214, 0.150),rgba(225, 214, 214, 0.150));
+  border-radius: 2rem;
+  padding: 20px 10px 20px;
+}
+
+.future-forecast-day-1 h4, .future-forecast-day-2 h4,
+.future-forecast-day-3 h4, .future-forecast-day-4 h4{
+  font: 300 2rem var(--Poppins);
+  color: var(--white);
+}
+
+.max-min-temp-otherdays{
+  background-color: var(--black);
+  padding: 20px;
+  margin:.5rem 0;
+  border-radius: 2rem;
+}
+
+.max-min-temp-otherdays h4{
+  color: var(--white);
+  font: 300 1.6rem var(--Poppins);
+  margin: .5rem 0;
+}
+
+.max-min-temp-otherdays img{
+  height: 100px;
+  width: 100px;
+}
+
+
+/* Air quality Indexhere */
+
+
+#airQualityIndex{
+  height: auto;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+#airQualityIndex h3{
+  font: 300 2.5rem var(--Poppins);
+  color: var(--white);
+  margin-bottom: .5rem;
+}
+
+.airQualityIndex_child{
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.airQualityIndex_historical, .airQualityIndex_current, .airQualityIndex_forecast{
+  height: 88vh;
+  width: 30vw;
+  background: linear-gradient(45deg,rgba(225, 214, 214, 0.150),rgba(225, 214, 214, 0.150));
+  margin: 1rem;
+  border-radius: 2rem;
+  padding: 20px;
+}
+
+.airQualityIndex_historical h3, .airQualityIndex_current h3, .airQualityIndex_forecast h3{
+  font: 300 2.5rem var(--Poppins);
+  color: var(--white);
+}
+.airQualityIndex_historical h4, .airQualityIndex_current h4, .airQualityIndex_forecast h4{
+  font: 300 1.6rem var(--Poppins);
+  color: var(--white);
+  margin: .5rem 0;
+}
+
+.airQualityIndex_current_box1, .airQualityIndex_forecast_box, .airQualityIndex_historical_box{
+  background-color: var(--black);
+  border-radius: 2rem;
+  padding: 10px;
+  margin: .5rem 0;
+}
+
+.aqi-forecast-date-dayName, .aqi-historical-date-dayName{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aqi-forecast-date-1, .aqi-forecast-day-1,
+.aqi-forecast-date-2, .aqi-forecast-day-2,
+.aqi-forecast-date-3, .aqi-forecast-day-3,
+.aqi-forecast-date-4, .aqi-forecast-day-4,
+.aqi-historical-date-1, .aqi-historical-day-1,
+.aqi-historical-date-2, .aqi-historical-day-2,
+.aqi-historical-date-3, .aqi-historical-day-3,
+.aqi-historical-date-4, .aqi-historical-day-4{
+  font: 400 1.4rem var(--Poppins);
+  color: var(--grey);
+}
+
+.forecast-aqi-index-1, .forecast-aqi-index-1-pollution-status,
+.forecast-aqi-index-2, .forecast-aqi-index-2-pollution-status,
+.forecast-aqi-index-3, .forecast-aqi-index-3-pollution-status,
+.forecast-aqi-index-4, .forecast-aqi-index-4-pollution-status,
+.historical-aqi-index-1, .historical-aqi-index-1-pollution-status,
+.historical-aqi-index-2, .historical-aqi-index-2-pollution-status,
+.historical-aqi-index-3, .historical-aqi-index-3-pollution-status,
+.historical-aqi-index-4, .historical-aqi-index-4-pollution-status{
+  color: var(--grey);
+}
+/* Media Querries */
+@media only screen and (max-width: 997px) {
+  html {
+    font-size: 55%;
+  }
+
+  #weather-details{
+    height: auto;
+    justify-content: center;
+  }
+  
+  .weather-details-box:first-child{
+    height: auto;
+  }
+
+  .weather-details-box{
+    height: auto;
+   width: 46vw;
+  }
+  #header .logo{
+    font: 500 4vw var(--Michroma);
+  }
+
+  .weather-tempreature img{
+    width: 25vw;
+  }
+  #future-forecast{
+    justify-content: center;
+  }
+  .future-forecast-day-1,
+  .future-forecast-day-2{
+    width: 47vw;
+    margin: .7rem;
+  }
+  .future-forecast-day-3,
+  .future-forecast-day-4{
+    width: 47vw;
+    margin: .7rem;
+  }
+
+  .airQualityIndex_child{
+    justify-content: center;
+  }
+
+   .airQualityIndex_forecast , .airQualityIndex_current{
+    width: 46vw;
+    margin: 1rem .5rem;
+   }
+   .airQualityIndex_historical{
+    width: 100vw;
+    margin: 1rem .5rem;
+   }
+
+   
+}
+
+@media only screen and (max-width: 767px) {
+  html {
+    font-size: 45%;
+  }
+
+  #header .logo{
+    margin-bottom: 1rem;
+  }
+
+  .user-current-location{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  .user_status{
+    display: none;
+  }
+  #header {
+    padding: 20px 10px;
+  }
+  .weather-details-box:first-child{
+    height: auto;
+  }
+  .weather-details-box{
+    height: auto;
+    width: 100vw;
+   }
+   .weather-tempreature img{
+    width: 35vw;
+  }
+
+  .feels-like-tempreature-box{
+    padding: 20px 10px 20px 25px;
+  }
+  .feels-like-tempreature-box .bi-thermometer-half{
+    font: 500 10rem var(--Poppins);
+  }
+
+
+
+.future-forecast-day-1,
+.future-forecast-day-2,
+.future-forecast-day-3,
+.future-forecast-day-4{
+  width: 100vw;
+  margin:.5rem 1rem;
+}
+
+.max-min-temp-otherdays{
+  padding: 10px 25px;
+}
+
+.airQualityIndex_historical , .airQualityIndex_current, .airQualityIndex_forecast{
+  width: 100vw;
+  margin: .5rem 0;
+  height: auto;
+}
+
+}
